@@ -66,6 +66,10 @@ const BlogCreationPage = () => {
           <Editor
             editorState={content}
             onEditorStateChange={(editorState) => setContent(editorState)}
+            toolbarClassName={`toolbarClassName ${darkMode ? "dark" : ""}`}
+            wrapperClassName="wrapperClassName"
+            editorClassName="editorClassName"
+            placeholder="Write The Content here..."
           />
         </div>
         <button type="submit">Submit</button>

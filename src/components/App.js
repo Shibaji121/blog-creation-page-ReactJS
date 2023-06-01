@@ -4,7 +4,7 @@ import BlogCreationPage from "./BlogCreationPage";
 function App() {
   return (
     <div className="App">
-      <h1 className="heading">Blog Creation Page</h1>
+      <h1 className="heading">CREATE A BLOG</h1>
       <BlogCreationPage />
     </div>
   );

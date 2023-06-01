@@ -89,6 +89,35 @@ button[type="submit"].dark {
   color: black;
 }
 
+.toolbarClassName {
+  border-radius: 10px !important;
+}
+
+.toolbarClassName * {
+  color: black;
+}
+
+.toolbarClassName.dark {
+  background-color: #333;
+}
+
+.toolbarClassName.dark * {
+  background-color: #333;
+  color: white;
+  filter: sepia(0.3);
+}
+
+.wrapperClassName {
+  border: 1px solid rgb(231, 221, 221);
+  padding: 1rem;
+}
+.editorClassName {
+  background-color: lightgrey;
+  border-radius: 10px;
+  padding: 1rem;
+  color: #333;
+}
+
 @media screen and (max-width: 600px) {
   .blog-creation-page {
     padding: 10px;
