@@ -13,13 +13,49 @@ body {
 }
 
 .blog-creation-page {
-  max-width: 52rem;
+  width: 80%;
   margin: 0 auto;
   padding: 20px;
   background-color: #fff;
   color: #333;
   border-radius: 20px;
-  border: 2px solid;
+  position: relative;
+  border: 2px solid transparent;
+}
+
+.blog-creation-page::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -4px;
+  right: -4px;
+  bottom: -10px;
+  z-index: -1;
+  border-radius: inherit;
+  background-image: linear-gradient(
+    45deg,
+    rgb(255, 0, 0),
+    rgb(255, 115, 0),
+    rgb(255, 251, 0),
+    rgb(72, 255, 0),
+    rgb(0, 255, 213),
+    rgb(0, 43, 255),
+    rgb(122, 0, 255),
+    rgb(255, 0, 200),
+    rgb(255, 0, 0)
+  );
+  filter: blur(10px);
+  background-size: 600% 100%;
+  animation: rainbowAnimation 5s linear infinite;
+}
+
+@keyframes rainbowAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
 .blog-creation-page.dark {
@@ -104,7 +140,6 @@ button[type="submit"].dark {
 .toolbarClassName.dark * {
   background-color: #333;
   color: white;
-  filter: sepia(0.3);
 }
 
 .wrapperClassName {
