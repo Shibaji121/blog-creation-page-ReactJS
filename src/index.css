@@ -12,14 +12,28 @@ body {
 }
 
 .blog-creation-page {
-  max-width: 800px;
+  max-width: 52rem;
   margin: 0 auto;
   padding: 20px;
   background-color: #fff;
   color: #333;
+  border-radius: 20px;
 }
 
 .blog-creation-page.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+.toggle-btn {
+  max-width: 10rem;
+  height: 2rem;
+  border-radius: inherit;
+  float: right;
+  margin: -72px auto;
+}
+
+.toggle-btn.dark {
   background-color: #333;
   color: #fff;
 }
@@ -74,5 +88,8 @@ button[type="submit"].dark {
 @media screen and (max-width: 600px) {
   .blog-creation-page {
     padding: 10px;
+  }
+  .toggle-btn {
+    margin: -10px 0 0 0;
   }
 }

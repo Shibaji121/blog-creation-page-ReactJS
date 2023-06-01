@@ -34,7 +34,10 @@ const BlogCreationPage = () => {
 
   return (
     <div className={`blog-creation-page ${darkMode ? "dark" : ""}`}>
-      <button onClick={handleToggleDarkMode}>
+      <button
+        className={`toggle-btn ${!darkMode ? "dark" : ""}`}
+        onClick={handleToggleDarkMode}
+      >
         {darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
       </button>
       <form onSubmit={handleSubmit}>
