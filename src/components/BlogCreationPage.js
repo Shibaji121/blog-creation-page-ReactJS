@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Editor } from "react-draft-wysiwyg";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+import { toast } from "react-toastify";
 
 const BlogCreationPage = () => {
   const [title, setTitle] = useState("");
@@ -10,26 +11,26 @@ const BlogCreationPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // Perform local validations
     if (!title || !description || !content) {
-      alert("Please fill in all fields");
+      toast.error("Please Fill in All the Details", {
+        theme: !darkMode ? "dark" : "light",
+      });
       return;
     }
 
-    // Process the blog submission here
-    // You can send the data to an API or perform any other action
-
-    // Clear the form
     setTitle("");
     setDescription("");
     setContent("");
-
-    alert("Blog submitted successfully!");
+    toast.success("Blog submitted successfully!", {
+      theme: !darkMode ? "dark" : "light",
+    });
   };
 
   const handleToggleDarkMode = () => {
     setDarkMode(!darkMode);
+    toast.success("Mode Changed Successfully", {
+      theme: darkMode ? "dark" : "light",
+    });
   };
 
   return (
